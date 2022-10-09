@@ -25,7 +25,14 @@ params = {
 }
 """
 Possible Graph Layout Options:
-
+            Default is 'draw_spring' 
+                'draw_circular', 
+                'draw_kamada_kawai', 
+                'draw_planar', 
+                'draw_random', 
+                'draw_spectral', 
+                'draw_spring', 
+                'draw_shell'
 """
 
 r = requests.get('http://127.0.0.1:5000/plot', params = params, json=adjacency_list)
