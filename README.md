@@ -2,7 +2,7 @@
 API to send adjacency list as input and request plot of directed or undirected graphs
 
 #### How to use the API ####
-
+```python
 import requests
 from PIL import Image
 import io
@@ -30,4 +30,4 @@ Possible Graph Layout Options:
 
 r = requests.get('http://127.0.0.1:5000/plot', params = params, json=adjacency_list)
 image = Image.open(io.BytesIO(r.content))
-
+```
