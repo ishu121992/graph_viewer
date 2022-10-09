@@ -16,6 +16,17 @@ adjacency_list = {'A': [('B', 8), ('C', 2), ('D', 4)],
 'E': [('B', 2), ('C', 3)], 
 'F': [('C', 9), ('D', 5)]}
 
+"""
+Possible Graph Layout Options:
+Default is 'draw_spring' 
+'draw_circular', 
+'draw_kamada_kawai', 
+'draw_planar', 
+'draw_random', 
+'draw_spectral', 
+'draw_spring', 
+'draw_shell'
+"""
 Create Parameters for API call
 params = {
             'graph_layout':'draw_spring', 
@@ -27,15 +38,7 @@ params = {
 r = requests.get('http://127.0.0.1:5000/plot', params = params, json=adjacency_list)
 image = Image.open(io.BytesIO(r.content))
 ```
-![download](https://user-images.githubusercontent.com/11437477/194770692-49910dde-4341-4421-ad30-bb29c1390e59.png)
+![download](https://user-images.githubusercontent.com/11437477/194770692-49910dde-4341-4421-ad30-bb29c1390e59.png, size=(500,500))
 
 
-Possible Graph Layout Options:
-            Default is 'draw_spring' 
-                'draw_circular', 
-                'draw_kamada_kawai', 
-                'draw_planar', 
-                'draw_random', 
-                'draw_spectral', 
-                'draw_spring', 
-                'draw_shell'
+
