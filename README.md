@@ -23,7 +23,13 @@ params = {
             'fig_size':(5,5), 
             'node_size':200
 }
-"""
+
+r = requests.get('http://127.0.0.1:5000/plot', params = params, json=adjacency_list)
+image = Image.open(io.BytesIO(r.content))
+```
+![download](https://user-images.githubusercontent.com/11437477/194770692-49910dde-4341-4421-ad30-bb29c1390e59.png)
+
+
 Possible Graph Layout Options:
             Default is 'draw_spring' 
                 'draw_circular', 
@@ -33,8 +39,3 @@ Possible Graph Layout Options:
                 'draw_spectral', 
                 'draw_spring', 
                 'draw_shell'
-"""
-
-r = requests.get('http://127.0.0.1:5000/plot', params = params, json=adjacency_list)
-image = Image.open(io.BytesIO(r.content))
-```
