@@ -38,7 +38,7 @@ params = {
 r = requests.get('http://127.0.0.1:5000/plot', params = params, json=adjacency_list)
 image = Image.open(io.BytesIO(r.content))
 ```
-<img src="[https://your-image-url.type](https://user-images.githubusercontent.com/11437477/194770692-49910dde-4341-4421-ad30-bb29c1390e59.png)" width="100" height="100">
+<img src="https://user-images.githubusercontent.com/11437477/194770692-49910dde-4341-4421-ad30-bb29c1390e59.png" width="500" height="500">
 ![download](https://user-images.githubusercontent.com/11437477/194770692-49910dde-4341-4421-ad30-bb29c1390e59.png)
 
 
